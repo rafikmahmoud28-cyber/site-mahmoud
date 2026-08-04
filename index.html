@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud RAFIK - Ingénieur Industriel Freelance</title>
+    <!-- On relie le fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- 1. MENU DE NAVIGATION (En-tête) -->
+    <!-- ============================================================ -->
+    <header>
+        <div class="container">
+            <div class="logo">Mahmoud RAFIK</div>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#about">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- 2. SECTION HÉROS (Avec votre photo à droite) -->
+    <!-- ============================================================ -->
+    <section id="hero">
+        <div class="container">
+            <!-- La div hero-content est maintenant en flex pour mettre la photo côte à côte -->
+            <div class="hero-content" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap; justify-content:center;">
+                
+                <!-- PARTIE GAUCHE : TEXTE -->
+                <div style="flex:1; min-width:280px; text-align:left;">
+                    <h1 style="text-align:left;">Mahmoud RAFIK</h1>
+                    <h2 style="text-align:left;">Ingénieur Industriel &amp; Freelance</h2>
+                    <p style="text-align:left;">
+                        <strong>Optimisation des processus • Conception d'outils sur mesure • Solutions digitales</strong>
+                    </p>
+                    <p style="text-align:left;">
+                        Je transforme vos problèmes opérationnels en solutions concrètes : 
+                        <strong>Lean Manufacturing, templates Excel, MRP, planification et reporting.</strong>
+                    </p>
+                    <a href="#contact" class="btn" style="display:inline-block;">📩 Demandez un devis gratuit</a>
+                </div>
+
+                <!-- PARTIE DROITE : PHOTO -->
+                <div style="flex:0 0 200px; text-align:center;">
+                    <!-- 
+                        ⚠️ IMPORTANT : 
+                        Si votre photo s'appelle autrement que "photo-profil.jpg", 
+                        modifiez le nom dans le src ci-dessous.
+                        Ex: src="assets/ma-photo.png"
+                    -->
+                    <img src="assets/photo-profil.jpg" alt="Mahmoud RAFIK" style="width:100%; max-width:200px; border-radius:50%; border:4px solid #f39c12; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. SECTION SERVICES (Ce que vous vendez) -->
+    <!-- ============================================================ -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Mes Services</h2>
+            <p style="text-align:center; margin-bottom:40px;">
+                Fort de mes compétences en <strong>Génie Industriel, Lean Six Sigma et programmation</strong>, 
+                j'apporte des solutions adaptées aux TPME et grandes industries.
+            </p>
+
+            <div class="services-grid">
+                <!-- Carte 1 -->
+                <div class="service-card">
+                    <h3>📊 Audit &amp; Optimisation</h3>
+                    <p>
+                        Diagnostic de vos processus, chasse au gaspillage (Lean), 
+                        et mise en place d'indicateurs de performance (KPI) pour 
+                        améliorer votre productivité.
+                    </p>
+                    <small>🔧 Compétences : Lean Six Sigma, Analyse de flux, Arena</small>
+                </div>
+
+                <!-- Carte 2 -->
+                <div class="service-card">
+                    <h3>⚙️ Outils de gestion sur mesure</h3>
+                    <p>
+                        Conception de <strong>templates Excel avancés</strong>, 
+                        fiches de calcul <strong>MRP</strong> (gestion de stocks et 
+                        besoins matières), et tableaux de bord interactifs.
+                    </p>
+                    <small>💻 Outils : Excel VBA, Python, SAP Business One</small>
+                </div>
+
+                <!-- Carte 3 -->
+                <div class="service-card">
+                    <h3>🌐 Solutions digitales &amp; Web</h3>
+                    <p>
+                        Création de <strong>sites web vitrines</strong> pour votre entreprise, 
+                        et développement de petites applications de gestion 
+                        (planning, suivi de production).
+                    </p>
+                    <small>🌍 Technologies : HTML/CSS, bases de données, Python</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. SECTION EXPÉRIENCES (Votre parcours) -->
+    <!-- ============================================================ -->
+    <section id="experiences" class="section" style="background-color: #f4f7f6;">
+        <div class="container">
+            <h2>Mes Expériences Terrain</h2>
+            
+            <div class="exp-item">
+                <h3>CLAYENS MOROCCO (Stage Ingénieur 5A)</h3>
+                <p><em>Février 2026 – Juillet 2026</em></p>
+                <p>Déploiement d'une démarche <strong>Lean Manufacturing</strong> pour éliminer les gaspillages et améliorer la performance opérationnelle.</p>
+            </div>
+
+            <div class="exp-item">
+                <h3>AMCOR Flexible (Stage Ingénieur 4A)</h3>
+                <p><em>Mai 2025 – Juillet 2025</em></p>
+                <p>Optimisation de la <strong>consommation de gaz propane</strong> sur les lignes de production, réduction des coûts énergétiques.</p>
+            </div>
+
+            <div class="exp-item">
+                <h3>SIFMOM (Stages &amp; Projets)</h3>
+                <p><em>2020 – 2024</em></p>
+                <p>Conception et réalisation d'<strong>outils de poinçonnage et d'emboutissage</strong> (SolidWorks, CATIA).</p>
+            </div>
+
+            <div class="exp-item">
+                <h3>INOMEC (Programmation industrielle)</h3>
+                <p><em>Janvier 2023 – Juin 2023</em></p>
+                <p>Programmation industrielle et dessin technique pour des pièces mécaniques.</p>
+            </div>
+
+            <div style="margin-top:30px; text-align:center;">
+                <p><strong>📌 Secteurs ciblés :</strong> Automobile, Aéronautique, Agroalimentaire, Logistique, et TPME marocaines.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. SECTION À PROPOS -->
+    <!-- ============================================================ -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div style="max-width:800px; margin:0 auto; line-height:1.8;">
+                <p>
+                    Je suis <strong>Mahmoud RAFIK</strong>, ingénieur d'État fraîchement diplômé du cycle 
+                    <strong>Génie Industriel et Logistique (HESTIM)</strong>, avec une double compétence 
+                    en mécanique et optimisation des processus.
+                </p>
+                <p>
+                    Ma formation m'a permis d'acquérir une vision <strong>systémique</strong> de l'entreprise : 
+                    de la conception (SolidWorks/CATIA) à la gestion de production (SAP, MRP), 
+                    en passant par l'amélioration continue (Lean Six Sigma Black Belt).
+                </p>
+                <p>
+                    <strong>Mes atouts :</strong> 
+                    Résolution de problèmes complexes, esprit critique, et maîtrise des outils digitaux 
+                    pour automatiser vos reportings et tableaux de bord.
+                </p>
+                
+                <h4 style="margin-top:25px;">📜 Certifications clés</h4>
+                <ul style="list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">Six Sigma Black Belt</li>
+                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">SAP Business One</li>
+                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">Agile Project Management</li>
+                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">Python &amp; Web Dev</li>
+                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">HSE Engineering</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. SECTION CONTACT -->
+    <!-- ============================================================ -->
+    <section id="contact" class="section" style="background-color: #f4f7f6;">
+        <div class="container">
+            <h2>Parlons de votre projet</h2>
+            <p style="text-align:center; margin-bottom:20px;">
+                Besoin d'un diagnostic, d'un template Excel ou d'un site web ? 
+                Contactez-moi dès maintenant.
+            </p>
+
+            <div style="max-width:500px; margin:0 auto;">
+                <!-- Formulaire (pour l'instant, il enverra vers votre email ou vous pourrez le configurer plus tard) -->
+                <form action="#" method="post">
+                    <input type="text" placeholder="Votre nom / Société" required>
+                    <input type="email" placeholder="Votre email professionnel" required>
+                    <input type="text" placeholder="Sujet (ex: Demande de devis pour template MRP)">
+                    <textarea placeholder="Décrivez votre besoin... (ex: Je cherche à optimiser mes stocks, j'ai besoin d'un tableau de bord...)" rows="5" required></textarea>
+                    <button type="submit" class="btn" style="width:100%; text-align:center; border:none; cursor:pointer;">Envoyer ma demande</button>
+                </form>
+
+                <div style="text-align:center; margin-top:30px;">
+                    <p>📞 Téléphone : <strong>06.87.33.10.88</strong></p>
+                    <p>📧 Email : <strong>rafik.mahmoud28@gmail.com</strong></p>
+                    <p style="margin-top:10px;">
+                        📱 Retrouvez-moi sur 
+                        <strong>Instagram</strong>, <strong>Facebook</strong> et <strong>LinkedIn</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. PIED DE PAGE (Footer) -->
+    <!-- ============================================================ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mahmoud RAFIK - Ingénieur Industriel Freelance. Tous droits réservés.</p>
+            <p style="font-size:0.9rem; opacity:0.7;">Basé à Mohammedia, Maroc | Permis B</p>
+        </div>
+    </footer>
+
+    <!-- On relie le fichier JavaScript (pour plus tard) -->
+    <script src="script.js"></script>
+
+</body>
+</html>

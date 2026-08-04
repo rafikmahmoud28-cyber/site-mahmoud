@@ -1,0 +1,312 @@
+/* ======================================== */
+/* 1. RESET ET POLICES DE BASE              */
+/* ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e2a3a;
+    background-color: #ffffff;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ======================================== */
+/* 2. MENU DE NAVIGATION (HEADER)           */
+/* ======================================== */
+
+header {
+    background-color: #0f1a24;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f39c12; /* La touche de couleur orange */
+}
+
+nav a {
+    color: #ccd6df;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+
+/* ======================================== */
+/* 3. SECTION HÉROS (Grande bannière)       */
+/* ======================================== */
+
+#hero {
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    color: white;
+    padding: 80px 20px 70px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#hero h1 {
+    font-size: 3.2rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+#hero .btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #0f1a24;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+#hero .btn:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+/* ======================================== */
+/* 4. SECTIONS GÉNÉRALES                    */
+/* ======================================== */
+
+.section {
+    padding: 70px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #0f1a24;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #f39c12;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ======================================== */
+/* 5. GRILLE DES SERVICES                   */
+/* ======================================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    border-top: 5px solid #f39c12;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0f1a24;
+}
+
+.service-card p {
+    color: #3d4a5a;
+    font-size: 0.98rem;
+}
+
+.service-card small {
+    display: block;
+    margin-top: 15px;
+    color: #f39c12;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* ======================================== */
+/* 6. EXPÉRIENCES (Items)                   */
+/* ======================================== */
+
+.exp-item {
+    background: white;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+    border-left: 5px solid #f39c12;
+}
+
+.exp-item h3 {
+    color: #0f1a24;
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+}
+
+.exp-item em {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.exp-item p {
+    margin-top: 8px;
+    color: #2c3e50;
+}
+
+/* ======================================== */
+/* 7. FORMULAIRE DE CONTACT                 */
+/* ======================================== */
+
+form input, 
+form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    border: 1px solid #dce1e6;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.3s;
+    background: white;
+    font-family: inherit;
+}
+
+form input:focus, 
+form textarea:focus {
+    border-color: #f39c12;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+}
+
+form .btn {
+    background-color: #0f1a24;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+form .btn:hover {
+    background-color: #f39c12;
+    color: #0f1a24;
+}
+
+/* ======================================== */
+/* 8. PIED DE PAGE (FOOTER)                 */
+/* ======================================== */
+
+footer {
+    background-color: #0f1a24;
+    color: #ccd6df;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ======================================== */
+/* 9. RESPONSIVE (Adaptation mobile)        */
+/* ======================================== */
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        margin-top: 12px;
+    }
+    nav a {
+        margin: 0 12px;
+        font-size: 0.9rem;
+    }
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+    #hero h2 {
+        font-size: 1.3rem;
+    }
+    .section {
+        padding: 50px 0;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
