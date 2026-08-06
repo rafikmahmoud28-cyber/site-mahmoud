@@ -54,7 +54,7 @@
                         modifiez le nom dans le src ci-dessous.
                         Ex: src="assets/ma-photo.png"
                     -->
-                    <img src="photo-profil.jpg" alt="Mahmoud RAFIK" style="width:100%; max-width:200px; border-radius:50%; border:4px solid #f39c12; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
+                    <img src="assets/photo-profil.jpg" alt="Mahmoud RAFIK" style="width:100%; max-width:200px; border-radius:50%; border:4px solid #f39c12; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
                 </div>
 
             </div>
@@ -194,13 +194,33 @@
 
             <div style="max-width:500px; margin:0 auto;">
                 <!-- Formulaire (pour l'instant, il enverra vers votre email ou vous pourrez le configurer plus tard) -->
-                <form action="#" method="post">
-                    <input type="text" placeholder="Votre nom / Société" required>
-                    <input type="email" placeholder="Votre email professionnel" required>
-                    <input type="text" placeholder="Sujet (ex: Demande de devis pour template MRP)">
-                    <textarea placeholder="Décrivez votre besoin... (ex: Je cherche à optimiser mes stocks, j'ai besoin d'un tableau de bord...)" rows="5" required></textarea>
-                    <button type="submit" class="btn" style="width:100%; text-align:center; border:none; cursor:pointer;">Envoyer ma demande</button>
-                </form>
+<!-- ============================================================ -->
+<!-- FORMULAIRE DE CONTACT AVEC FORMSUBMIT (Fonctionnel)           -->
+<!-- ============================================================ -->
+<form action="https://formsubmit.co/rafik.mahmoud28@gmail.com" method="POST">
+
+    <!-- Ces champs cachés évitent le spam et personnalisent l'envoi -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Nouvelle demande de devis - Site Mahmoud">
+
+    <!-- Champ : Nom / Société -->
+    <input type="text" name="nom" placeholder="Votre nom / Société" required>
+
+    <!-- Champ : Email -->
+    <input type="email" name="email" placeholder="Votre email professionnel" required>
+
+    <!-- Champ : Sujet -->
+    <input type="text" name="sujet" placeholder="Sujet (ex: Demande de devis pour template MRP)">
+
+    <!-- Champ : Message -->
+    <textarea name="message" placeholder="Décrivez votre besoin... (ex: Je cherche à optimiser mes stocks, j'ai besoin d'un tableau de bord...)" rows="5" required></textarea>
+
+    <!-- Bouton d'envoi -->
+    <button type="submit" class="btn" style="width:100%; text-align:center; border:none; cursor:pointer;">
+        Envoyer ma demande
+    </button>
+</form>
 
                 <div style="text-align:center; margin-top:30px;">
                     <p>📞 Téléphone : <strong>06.87.33.10.88</strong></p>
