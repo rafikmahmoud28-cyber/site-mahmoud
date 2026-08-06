@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahmoud RAFIK - Ingénieur Industriel Freelance</title>
     
-    <!-- CSS ENTIÈREMENT INTÉGRÉ POUR UNE COMPATIBILITÉ TOTALE -->
+    <!-- CSS ENTIÈREMENT INTÉGRÉ -->
     <style>
         /* --- RESET & BASES --- */
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -164,7 +164,7 @@
 <body>
 
     <!-- ============================================================ -->
-    <!-- 1. MENU DE NAVIGATION (En-tête) -->
+    <!-- 1. MENU DE NAVIGATION -->
     <!-- ============================================================ -->
     <header>
         <div class="container">
@@ -179,7 +179,7 @@
     </header>
 
     <!-- ============================================================ -->
-    <!-- 2. SECTION HÉROS -->
+    <!-- 2. SECTION HÉROS (AVEC LA PHOTO CORRIGÉE) -->
     <!-- ============================================================ -->
     <section id="hero">
         <div class="container hero-flex">
@@ -190,9 +190,11 @@
                 <p>Je transforme vos problèmes opérationnels en solutions concrètes : <strong>Lean Manufacturing, templates Excel, MRP, planification et reporting.</strong></p>
                 <a href="#contact" class="btn">📩 Demandez un devis gratuit</a>
             </div>
+            
+            <!-- C'EST ICI QUE LA PHOTO A ÉTÉ CORRIGÉE -->
+            <!-- Elle doit s'appeler "photo-profil.jpg" et être juste à côté du fichier index.html -->
             <div class="hero-img">
-                <!-- Si votre photo s'appelle "photo-profil.jpg", placez-la dans le dossier "assets/" à côté de ce fichier -->
-                <img src="assets/photo-profil.jpg" alt="Mahmoud RAFIK">
+                <img src="photo-profil.jpg" alt="Mahmoud RAFIK">
             </div>
         </div>
     </section>
@@ -266,7 +268,7 @@
         <div class="container">
             <h2>À propos de moi</h2>
             <div style="max-width:800px; margin:0 auto; line-height:1.8;">
-                <p>Je suis <strong>Mahmoud RAFIK</strong>, ingénieur d'État fraîchement diplômé du cycle <strong>Génie Industriel et Logistique </strong>, avec une double compétence en mécanique et optimisation des processus.</p>
+                <p>Je suis <strong>Mahmoud RAFIK</strong>, ingénieur d'État fraîchement diplômé du cycle <strong>Génie Industriel et Logistique (HESTIM)</strong>, avec une double compétence en mécanique et optimisation des processus.</p>
                 <p>Ma formation m'a permis d'acquérir une vision <strong>systémique</strong> de l'entreprise : de la conception (SolidWorks/CATIA) à la gestion de production (SAP, MRP), en passant par l'amélioration continue (Lean Six Sigma Black Belt).</p>
                 
                 <h4 style="margin-top:25px;">📜 Certifications clés</h4>
@@ -294,17 +296,11 @@
 
             <div class="form-wrapper" id="contact-form-wrapper">
                 
-                <!-- Le formulaire de contact -->
                 <form id="contact-form" action="https://formsubmit.co/rafik.mahmoud28@gmail.com" method="POST">
-                    
-                    <!-- CHAMPS CACHÉS DE SÉCURITÉ ET CONFIGURATION -->
-                    <input type="hidden" name="_captcha" value="true"> <!-- Active le système anti-spam -->
-                    <input type="hidden" name="_template" value="table"> <!-- Reçoit l'email en joli tableau -->
+                    <!-- CHAMPS CACHÉS DE SÉCURITÉ -->
+                    <input type="hidden" name="_captcha" value="true">
+                    <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_subject" value="Nouvelle demande de devis - Site Mahmoud">
-                    
-                    <!-- ⚠️ POUR TESTER LE MESSAGE DE REMERCIEMENT PLUS TARD :
-                         Remplacez le lien ci-dessous par l'URL exacte de votre site.
-                         Exemple: "https://www.monsite.com/?sent=ok" -->
                     <input type="hidden" name="_next" value="https://votre-site.com/?sent=ok">
 
                     <!-- CHAMPS DU FORMULAIRE -->
@@ -316,7 +312,6 @@
                     <button type="submit" class="btn-form">Envoyer ma demande</button>
                 </form>
                 
-                <!-- MESSAGE DE REMERCIEMENT (Affiché automatiquement après envoi via JavaScript) -->
                 <div id="thank-you-message">
                     <h3>✅ Merci pour votre message !</h3>
                     <p>Je vous répondrai dans les plus brefs délais (généralement sous 24 heures).<br>
@@ -344,20 +339,17 @@
     </footer>
 
     <!-- ============================================================ -->
-    <!-- 8. SCRIPT JAVASCRIPT (GÉRER L'AFFICHAGE DU MERCI) -->
+    <!-- 8. SCRIPT JAVASCRIPT (MERCI) -->
     <!-- ============================================================ -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // 1. Vérifier si l'utilisateur vient d'envoyer le formulaire (présence de ?sent=ok dans l'URL)
             const urlParams = new URLSearchParams(window.location.search);
             const isFormSent = urlParams.get('sent') === 'ok';
 
-            // 2. Si le formulaire a été envoyé, on masque le formulaire et on affiche le message de remerciement
             if (isFormSent) {
                 document.getElementById('contact-form').style.display = 'none';
                 document.getElementById('thank-you-message').style.display = 'block';
                 
-                // (Optionnel) Nettoyer l'URL pour enlever le ?sent=ok de la barre d'adresse du navigateur
                 if(window.history && window.history.replaceState) {
                     const cleanUrl = window.location.pathname + window.location.hash;
                     window.history.replaceState(null, null, cleanUrl);
