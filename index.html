@@ -4,8 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahmoud RAFIK - Ingénieur Industriel Freelance</title>
-    <!-- On relie le fichier CSS -->
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS ENTIÈREMENT INTÉGRÉ POUR UNE COMPATIBILITÉ TOTALE -->
+    <style>
+        /* --- RESET & BASES --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.7;
+            background-color: #ffffff;
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+        
+        /* --- HEADER --- */
+        header {
+            background: #1a2a3a;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+        header nav { display: flex; gap: 25px; flex-wrap: wrap; }
+        header nav a { color: #ddd; font-weight: 500; }
+        header nav a:hover { color: #f39c12; }
+
+        /* --- HERO --- */
+        #hero {
+            background: linear-gradient(135deg, #f4f7f6 0%, #e2e8f0 100%);
+            padding: 80px 0;
+        }
+        #hero h1 { font-size: 3rem; color: #1a2a3a; margin-bottom: 5px; font-weight: 700; }
+        #hero h2 { font-size: 1.8rem; color: #f39c12; margin-bottom: 15px; font-weight: 400; }
+        #hero p { color: #4a5568; max-width: 600px; margin-bottom: 20px; }
+        .btn {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #1a2a3a;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: #e67e22; transform: translateY(-2px); }
+        .hero-flex { display: flex; align-items: center; gap: 40px; justify-content: center; flex-wrap: wrap; }
+        .hero-text { flex: 1; min-width: 280px; }
+        .hero-img { flex: 0 0 200px; text-align: center; }
+        .hero-img img {
+            width: 100%; max-width: 200px; border-radius: 50%;
+            border: 4px solid #f39c12; background: #fff;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        /* --- SECTIONS GÉNÉRALES --- */
+        .section { padding: 70px 0; }
+        .section h2 { text-align: center; font-size: 2.3rem; margin-bottom: 30px; color: #1a2a3a; position: relative; }
+        .section h2::after {
+            content: ''; display: block; width: 60px; height: 4px;
+            background: #f39c12; margin: 10px auto 0; border-radius: 2px;
+        }
+
+        /* --- SERVICES --- */
+        #services { background: #fff; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background: #f8fafc;
+            padding: 30px; border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .service-card h3 { color: #f39c12; margin-bottom: 15px; font-size: 1.3rem; }
+        .service-card small { display: block; margin-top: 15px; color: #718096; font-size: 0.9rem; }
+
+        /* --- EXPÉRIENCES --- */
+        #experiences { background: #f4f7f6; }
+        .exp-item {
+            background: #fff; padding: 20px 25px; margin-bottom: 20px;
+            border-radius: 8px; border-left: 4px solid #f39c12;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .exp-item h3 { color: #1a2a3a; }
+        .exp-item em { color: #718096; display: block; margin-bottom: 10px; }
+
+        /* --- ABOUT --- */
+        #about { background: #fff; }
+        #about ul { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 10px; }
+        #about ul li {
+            background: #1a2a3a; color: white; padding: 6px 18px;
+            border-radius: 20px; font-size: 0.9rem; list-style: none;
+        }
+
+        /* --- CONTACT & FORMULAIRE --- */
+        #contact { background: #f4f7f6; }
+        .form-wrapper {
+            max-width: 550px; margin: 20px auto; background: #fff;
+            padding: 35px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+        input, textarea {
+            width: 100%; padding: 15px; margin-bottom: 20px; font-size: 1rem;
+            border: 1px solid #e2e8f0; border-radius: 8px;
+            background: #f9fafb; transition: 0.3s; font-family: inherit;
+        }
+        input:focus, textarea:focus {
+            outline: none; border-color: #f39c12; background: #fff;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+        }
+        textarea { resize: vertical; min-height: 120px; }
+        .btn-form {
+            width: 100%; padding: 16px; background: #f39c12; color: #1a2a3a;
+            border: none; border-radius: 8px; font-weight: 700; font-size: 1.1rem;
+            cursor: pointer; transition: 0.3s;
+        }
+        .btn-form:hover { background: #e67e22; transform: scale(1.02); }
+
+        /* --- MESSAGE DE REMERCIEMENT --- */
+        #thank-you-message {
+            display: none; /* Caché par défaut */
+            text-align: center; background: #e6fffa; color: #234e52;
+            padding: 40px; border-radius: 12px;
+            border: 2px solid #81e6d9;
+        }
+        #thank-you-message h3 { margin-bottom: 15px; font-size: 1.8rem; }
+        #thank-you-message p { font-size: 1.1rem; margin-bottom: 20px; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a2a3a; color: #ddd; text-align: center;
+            padding: 30px 0; font-size: 0.95rem; border-top: 4px solid #f39c12;
+        }
+        footer p { margin: 5px 0; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            header .container { flex-direction: column; gap: 15px; }
+            header nav { justify-content: center; gap: 15px; }
+            #hero h1 { font-size: 2.2rem; }
+        }
+    </style>
 </head>
 <body>
 
@@ -25,84 +179,48 @@
     </header>
 
     <!-- ============================================================ -->
-    <!-- 2. SECTION HÉROS (Avec votre photo à droite) -->
+    <!-- 2. SECTION HÉROS -->
     <!-- ============================================================ -->
     <section id="hero">
-        <div class="container">
-            <!-- La div hero-content est maintenant en flex pour mettre la photo côte à côte -->
-            <div class="hero-content" style="display:flex; align-items:center; gap:40px; flex-wrap:wrap; justify-content:center;">
-                
-                <!-- PARTIE GAUCHE : TEXTE -->
-                <div style="flex:1; min-width:280px; text-align:left;">
-                    <h1 style="text-align:left;">Mahmoud RAFIK</h1>
-                    <h2 style="text-align:left;">Ingénieur Industriel &amp; Freelance</h2>
-                    <p style="text-align:left;">
-                        <strong>Optimisation des processus • Conception d'outils sur mesure • Solutions digitales</strong>
-                    </p>
-                    <p style="text-align:left;">
-                        Je transforme vos problèmes opérationnels en solutions concrètes : 
-                        <strong>Lean Manufacturing, templates Excel, MRP, planification et reporting.</strong>
-                    </p>
-                    <a href="#contact" class="btn" style="display:inline-block;">📩 Demandez un devis gratuit</a>
-                </div>
-
-                <!-- PARTIE DROITE : PHOTO -->
-                <div style="flex:0 0 200px; text-align:center;">
-                    <!-- 
-                        ⚠️ IMPORTANT : 
-                        Si votre photo s'appelle autrement que "photo-profil.jpg", 
-                        modifiez le nom dans le src ci-dessous.
-                        Ex: src="assets/ma-photo.png"
-                    -->
-                    <img src="assets/photo-profil.jpg" alt="Mahmoud RAFIK" style="width:100%; max-width:200px; border-radius:50%; border:4px solid #f39c12; box-shadow: 0 8px 25px rgba(0,0,0,0.3);">
-                </div>
-
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>Mahmoud RAFIK</h1>
+                <h2>Ingénieur Industriel &amp; Freelance</h2>
+                <p><strong>Optimisation des processus • Conception d'outils sur mesure • Solutions digitales</strong></p>
+                <p>Je transforme vos problèmes opérationnels en solutions concrètes : <strong>Lean Manufacturing, templates Excel, MRP, planification et reporting.</strong></p>
+                <a href="#contact" class="btn">📩 Demandez un devis gratuit</a>
+            </div>
+            <div class="hero-img">
+                <!-- Si votre photo s'appelle "photo-profil.jpg", placez-la dans le dossier "assets/" à côté de ce fichier -->
+                <img src="assets/photo-profil.jpg" alt="Mahmoud RAFIK">
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- 3. SECTION SERVICES (Ce que vous vendez) -->
+    <!-- 3. SECTION SERVICES -->
     <!-- ============================================================ -->
     <section id="services" class="section">
         <div class="container">
             <h2>Mes Services</h2>
-            <p style="text-align:center; margin-bottom:40px;">
+            <p style="text-align:center; margin-bottom:40px; color: #4a5568;">
                 Fort de mes compétences en <strong>Génie Industriel, Lean Six Sigma et programmation</strong>, 
                 j'apporte des solutions adaptées aux TPME et grandes industries.
             </p>
-
             <div class="services-grid">
-                <!-- Carte 1 -->
                 <div class="service-card">
                     <h3>📊 Audit &amp; Optimisation</h3>
-                    <p>
-                        Diagnostic de vos processus, chasse au gaspillage (Lean), 
-                        et mise en place d'indicateurs de performance (KPI) pour 
-                        améliorer votre productivité.
-                    </p>
+                    <p>Diagnostic de vos processus, chasse au gaspillage (Lean), et mise en place d'indicateurs de performance (KPI) pour améliorer votre productivité.</p>
                     <small>🔧 Compétences : Lean Six Sigma, Analyse de flux, Arena</small>
                 </div>
-
-                <!-- Carte 2 -->
                 <div class="service-card">
                     <h3>⚙️ Outils de gestion sur mesure</h3>
-                    <p>
-                        Conception de <strong>templates Excel avancés</strong>, 
-                        fiches de calcul <strong>MRP</strong> (gestion de stocks et 
-                        besoins matières), et tableaux de bord interactifs.
-                    </p>
+                    <p>Conception de <strong>templates Excel avancés</strong>, fiches de calcul <strong>MRP</strong> (gestion de stocks et besoins matières), et tableaux de bord interactifs.</p>
                     <small>💻 Outils : Excel VBA, Python, SAP Business One</small>
                 </div>
-
-                <!-- Carte 3 -->
                 <div class="service-card">
                     <h3>🌐 Solutions digitales &amp; Web</h3>
-                    <p>
-                        Création de <strong>sites web vitrines</strong> pour votre entreprise, 
-                        et développement de petites applications de gestion 
-                        (planning, suivi de production).
-                    </p>
+                    <p>Création de <strong>sites web vitrines</strong> pour votre entreprise, et développement de petites applications de gestion (planning, suivi de production).</p>
                     <small>🌍 Technologies : HTML/CSS, bases de données, Python</small>
                 </div>
             </div>
@@ -110,36 +228,31 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- 4. SECTION EXPÉRIENCES (Votre parcours) -->
+    <!-- 4. SECTION EXPÉRIENCES -->
     <!-- ============================================================ -->
-    <section id="experiences" class="section" style="background-color: #f4f7f6;">
+    <section id="experiences" class="section">
         <div class="container">
             <h2>Mes Expériences Terrain</h2>
-            
             <div class="exp-item">
                 <h3>CLAYENS MOROCCO (Stage Ingénieur 5A)</h3>
-                <p><em>Février 2026 – Juillet 2026</em></p>
+                <em>Février 2026 – Juillet 2026</em>
                 <p>Déploiement d'une démarche <strong>Lean Manufacturing</strong> pour éliminer les gaspillages et améliorer la performance opérationnelle.</p>
             </div>
-
             <div class="exp-item">
                 <h3>AMCOR Flexible (Stage Ingénieur 4A)</h3>
-                <p><em>Mai 2025 – Juillet 2025</em></p>
+                <em>Mai 2025 – Juillet 2025</em>
                 <p>Optimisation de la <strong>consommation de gaz propane</strong> sur les lignes de production, réduction des coûts énergétiques.</p>
             </div>
-
             <div class="exp-item">
                 <h3>SIFMOM (Stages &amp; Projets)</h3>
-                <p><em>2020 – 2024</em></p>
+                <em>2020 – 2024</em>
                 <p>Conception et réalisation d'<strong>outils de poinçonnage et d'emboutissage</strong> (SolidWorks, CATIA).</p>
             </div>
-
             <div class="exp-item">
                 <h3>INOMEC (Programmation industrielle)</h3>
-                <p><em>Janvier 2023 – Juin 2023</em></p>
+                <em>Janvier 2023 – Juin 2023</em>
                 <p>Programmation industrielle et dessin technique pour des pièces mécaniques.</p>
             </div>
-
             <div style="margin-top:30px; text-align:center;">
                 <p><strong>📌 Secteurs ciblés :</strong> Automobile, Aéronautique, Agroalimentaire, Logistique, et TPME marocaines.</p>
             </div>
@@ -153,89 +266,75 @@
         <div class="container">
             <h2>À propos de moi</h2>
             <div style="max-width:800px; margin:0 auto; line-height:1.8;">
-                <p>
-                    Je suis <strong>Mahmoud RAFIK</strong>, ingénieur d'État fraîchement diplômé du cycle 
-                    <strong>Génie Industriel et Logistique (HESTIM)</strong>, avec une double compétence 
-                    en mécanique et optimisation des processus.
-                </p>
-                <p>
-                    Ma formation m'a permis d'acquérir une vision <strong>systémique</strong> de l'entreprise : 
-                    de la conception (SolidWorks/CATIA) à la gestion de production (SAP, MRP), 
-                    en passant par l'amélioration continue (Lean Six Sigma Black Belt).
-                </p>
-                <p>
-                    <strong>Mes atouts :</strong> 
-                    Résolution de problèmes complexes, esprit critique, et maîtrise des outils digitaux 
-                    pour automatiser vos reportings et tableaux de bord.
-                </p>
+                <p>Je suis <strong>Mahmoud RAFIK</strong>, ingénieur d'État fraîchement diplômé du cycle <strong>Génie Industriel et Logistique (HESTIM)</strong>, avec une double compétence en mécanique et optimisation des processus.</p>
+                <p>Ma formation m'a permis d'acquérir une vision <strong>systémique</strong> de l'entreprise : de la conception (SolidWorks/CATIA) à la gestion de production (SAP, MRP), en passant par l'amélioration continue (Lean Six Sigma Black Belt).</p>
                 
                 <h4 style="margin-top:25px;">📜 Certifications clés</h4>
-                <ul style="list-style:none; padding:0; display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
-                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">Six Sigma Black Belt</li>
-                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">SAP Business One</li>
-                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">Agile Project Management</li>
-                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">Python &amp; Web Dev</li>
-                    <li style="background:#1a2a3a; color:white; padding:8px 15px; border-radius:20px;">HSE Engineering</li>
+                <ul>
+                    <li>Six Sigma Black Belt</li>
+                    <li>SAP Business One</li>
+                    <li>Agile Project Management</li>
+                    <li>Python &amp; Web Dev</li>
+                    <li>HSE Engineering</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- 6. SECTION CONTACT -->
+    <!-- 6. SECTION CONTACT (AVEC FORMULAIRE SÉCURISÉ) -->
     <!-- ============================================================ -->
-    <section id="contact" class="section" style="background-color: #f4f7f6;">
+    <section id="contact" class="section">
         <div class="container">
             <h2>Parlons de votre projet</h2>
-            <p style="text-align:center; margin-bottom:20px;">
-                Besoin d'un diagnostic, d'un template Excel ou d'un site web ? 
+            <p style="text-align:center; margin-bottom:20px; color: #4a5568;">
+                Besoin d'un diagnostic, d'un template Excel ou d'un site web ?<br>
                 Contactez-moi dès maintenant.
             </p>
 
-            <div style="max-width:500px; margin:0 auto;">
-                <!-- Formulaire (pour l'instant, il enverra vers votre email ou vous pourrez le configurer plus tard) -->
-<!-- ============================================================ -->
-<!-- FORMULAIRE DE CONTACT AVEC FORMSUBMIT (Fonctionnel)           -->
-<!-- ============================================================ -->
-<form action="https://formsubmit.co/rafik.mahmoud28@gmail.com" method="POST">
+            <div class="form-wrapper" id="contact-form-wrapper">
+                
+                <!-- Le formulaire de contact -->
+                <form id="contact-form" action="https://formsubmit.co/rafik.mahmoud28@gmail.com" method="POST">
+                    
+                    <!-- CHAMPS CACHÉS DE SÉCURITÉ ET CONFIGURATION -->
+                    <input type="hidden" name="_captcha" value="true"> <!-- Active le système anti-spam -->
+                    <input type="hidden" name="_template" value="table"> <!-- Reçoit l'email en joli tableau -->
+                    <input type="hidden" name="_subject" value="Nouvelle demande de devis - Site Mahmoud">
+                    
+                    <!-- ⚠️ POUR TESTER LE MESSAGE DE REMERCIEMENT PLUS TARD :
+                         Remplacez le lien ci-dessous par l'URL exacte de votre site.
+                         Exemple: "https://www.monsite.com/?sent=ok" -->
+                    <input type="hidden" name="_next" value="https://votre-site.com/?sent=ok">
 
-    <!-- Ces champs cachés évitent le spam et personnalisent l'envoi -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_subject" value="Nouvelle demande de devis - Site Mahmoud">
+                    <!-- CHAMPS DU FORMULAIRE -->
+                    <input type="text" name="nom" placeholder="Votre nom / Société" required>
+                    <input type="email" name="email" placeholder="Votre email professionnel" required>
+                    <input type="text" name="sujet" placeholder="Sujet (ex: Demande de devis pour template MRP)" required>
+                    <textarea name="message" placeholder="Décrivez votre besoin... (ex: Je cherche à optimiser mes stocks, j'ai besoin d'un tableau de bord...)" required></textarea>
 
-    <!-- Champ : Nom / Société -->
-    <input type="text" name="nom" placeholder="Votre nom / Société" required>
-
-    <!-- Champ : Email -->
-    <input type="email" name="email" placeholder="Votre email professionnel" required>
-
-    <!-- Champ : Sujet -->
-    <input type="text" name="sujet" placeholder="Sujet (ex: Demande de devis pour template MRP)">
-
-    <!-- Champ : Message -->
-    <textarea name="message" placeholder="Décrivez votre besoin... (ex: Je cherche à optimiser mes stocks, j'ai besoin d'un tableau de bord...)" rows="5" required></textarea>
-
-    <!-- Bouton d'envoi -->
-    <button type="submit" class="btn" style="width:100%; text-align:center; border:none; cursor:pointer;">
-        Envoyer ma demande
-    </button>
-</form>
+                    <button type="submit" class="btn-form">Envoyer ma demande</button>
+                </form>
+                
+                <!-- MESSAGE DE REMERCIEMENT (Affiché automatiquement après envoi via JavaScript) -->
+                <div id="thank-you-message">
+                    <h3>✅ Merci pour votre message !</h3>
+                    <p>Je vous répondrai dans les plus brefs délais (généralement sous 24 heures).<br>
+                    En attendant, n'hésitez pas à consulter mes autres services.</p>
+                    <a href="#services" class="btn" style="display:inline-block; font-size:0.9rem;">Voir mes services</a>
+                </div>
 
                 <div style="text-align:center; margin-top:30px;">
                     <p>📞 Téléphone : <strong>06.87.33.10.88</strong></p>
                     <p>📧 Email : <strong>rafik.mahmoud28@gmail.com</strong></p>
-                    <p style="margin-top:10px;">
-                        📱 Retrouvez-moi sur 
-                        <strong>Instagram</strong>, <strong>Facebook</strong> et <strong>LinkedIn</strong>
-                    </p>
+                    <p style="margin-top:10px;">📱 Retrouvez-moi sur <strong>Instagram</strong>, <strong>Facebook</strong> et <strong>LinkedIn</strong></p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- 7. PIED DE PAGE (Footer) -->
+    <!-- 7. PIED DE PAGE -->
     <!-- ============================================================ -->
     <footer>
         <div class="container">
@@ -244,8 +343,28 @@
         </div>
     </footer>
 
-    <!-- On relie le fichier JavaScript (pour plus tard) -->
-    <script src="script.js"></script>
+    <!-- ============================================================ -->
+    <!-- 8. SCRIPT JAVASCRIPT (GÉRER L'AFFICHAGE DU MERCI) -->
+    <!-- ============================================================ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Vérifier si l'utilisateur vient d'envoyer le formulaire (présence de ?sent=ok dans l'URL)
+            const urlParams = new URLSearchParams(window.location.search);
+            const isFormSent = urlParams.get('sent') === 'ok';
+
+            // 2. Si le formulaire a été envoyé, on masque le formulaire et on affiche le message de remerciement
+            if (isFormSent) {
+                document.getElementById('contact-form').style.display = 'none';
+                document.getElementById('thank-you-message').style.display = 'block';
+                
+                // (Optionnel) Nettoyer l'URL pour enlever le ?sent=ok de la barre d'adresse du navigateur
+                if(window.history && window.history.replaceState) {
+                    const cleanUrl = window.location.pathname + window.location.hash;
+                    window.history.replaceState(null, null, cleanUrl);
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
